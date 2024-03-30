@@ -1,11 +1,31 @@
+import { useState } from "react";
 import logo from "../assets/footer-logo.png";
 import heroImg from "../assets/heroImg.png";
 import soundGif from "../assets/sound.gif";
 import strokeImg from "../assets/stroke.png";
 
 const Hero = () => {
+  const [visible, setVisible] = useState(true);
   return (
     <>
+      <div
+        className={`h-auto md:h-[100vh] bg-[#FF007F] ${
+          !visible ? "hidden fixed overflow-x-hidden overflow-y-hidden" : ""
+        }`}
+      >
+        <div className="flex">
+          <div className="flex-1"></div>
+          <div className="border-l-4 px-8 border-white h-auto md:h-[100vh] flex items-center justify-center">
+            <button
+              className="text-4xl text-white"
+              onClick={() => setVisible((prev) => !prev)}
+            >
+              &times;
+            </button>
+          </div>
+        </div>
+      </div>
+
       <div className="h-auto md:h-[95vh] bg-[#5BD7E8] border-bottom">
         <div className="flex">
           <div className="flex-1">
@@ -47,7 +67,12 @@ const Hero = () => {
           </div>
 
           <div className="border-l-4   px-8 border-[#FF007F] h-auto md:h-[95vh] flex items-center justify-center">
-            <button className="text-4xl text-[#FF007F]">&#9776;</button>
+            <button
+              className="text-4xl text-[#FF007F]"
+              onClick={() => setVisible((prev) => !prev)}
+            >
+              &#9776;
+            </button>
           </div>
         </div>
       </div>
