@@ -107,13 +107,9 @@ const SelectCampaignType = ({fn}) => {
           </div>
         </div>
 
-        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto absolute bottom-0 left-1/2">
+        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto absolute bottom-0 left-1/2" onClick={() => fn(prev => prev+1)}>
           Next
         </button>
-        {
-          console.log(fn
-            )
-        }
       </div>
     </>
   );

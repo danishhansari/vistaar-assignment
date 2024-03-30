@@ -4,7 +4,7 @@ import socialMediaFollowerImg from "../assets/social-media-follower.png";
 import leadsAndSalesImg from "../assets/leads-and-sales.png";
 import brandAwarenessImg from "../assets/brand-awareness.png";
 import analyticsImg from "../assets/analytics.png";
-const DataFields = () => {
+const DataFields = ({fn}) => {
   return (
     <div className="bg-white rounded-[3rem] relative pb-24">
       <h1 className="py-4 text-center kanik w-[50%] mx-auto uppercase text-4xl text-[#3D159F] font-semibold ">
@@ -96,8 +96,8 @@ const DataFields = () => {
       </div>
 
       <div className=" absolute bottom-0 left-2/3">
-        <button className="mr-4 text-2xl text-[#4700ff] font-semibold underline">Go Back</button>
-        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto">
+        <button className="mr-4 text-2xl text-[#4700ff] font-semibold underline" onClick={() => fn(prev => prev-1)}>Go Back</button>
+        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto" onClick={() => fn(prev => prev+1)} >
           Next
         </button>
       </div>

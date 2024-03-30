@@ -1,5 +1,5 @@
 import contactImg from "../assets/contact.png";
-const ContactDetails = () => {
+const ContactDetails = ({fn}) => {
   return (
     <>
       <div className="bg-white rounded-[3rem] relative pb-24">
@@ -53,10 +53,10 @@ const ContactDetails = () => {
         </div>
 
         <div className=" absolute bottom-0 left-2/3">
-          <button className="mr-4 text-2xl text-[#4700ff] font-semibold underline">
+          <button className="mr-4 text-2xl text-[#4700ff] font-semibold underline" onClick={() => fn(prev => prev-1)}>
             Go Back
           </button>
-          <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto uppercase">
+          <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto uppercase" onClick={() => fn(prev => prev+1)}>
             send
           </button>
         </div>

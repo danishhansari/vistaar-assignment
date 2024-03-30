@@ -1,7 +1,7 @@
 import downArrow from "../assets/down-arrow.png";
 import calender from "../assets/calender.png";
 
-const CampaignDuration = () => {
+const CampaignDuration = ({fn}) => {
   return (
     <>
       <div className="bg-white rounded-[3rem] relative pb-24">
@@ -19,12 +19,11 @@ const CampaignDuration = () => {
         </div>
 
         <div className=" absolute bottom-0 left-2/3">
-          <button className="mr-4 text-2xl text-[#4700ff] font-semibold underline">
-            Go Back
-          </button>
-          <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto">
-            Next
-          </button>
+        <button className="mr-4 text-2xl text-[#4700ff] font-semibold underline" onClick={() => fn(prev => prev-1)}>Go Back</button>
+        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto" onClick={() => fn(prev => prev+1)} >
+          Next
+        </button>
+          
         </div>
       </div>
     </>
