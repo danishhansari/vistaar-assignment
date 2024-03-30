@@ -5,19 +5,39 @@ import soundGif from "../assets/sound.gif";
 import strokeImg from "../assets/stroke.png";
 
 const Hero = () => {
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
   return (
     <>
       <div
-        className={`h-auto md:h-[100vh] bg-[#FF007F] ${
-          !visible ? "hidden fixed overflow-x-hidden overflow-y-hidden" : ""
+        className={`h-auto w-full md:h-[100vh] bg-[#FF007F] ${
+          !visible
+            ? "hidden sticky top-0 left-0 overflow-x-hidden overflow-y-hidden"
+            : ""
         }`}
       >
-        <div className="flex">
-          <div className="flex-1"></div>
-          <div className="border-l-4 px-8 border-white h-auto md:h-[100vh] flex items-center justify-center">
+        <div className="flex items-center justify-center">
+          <div className="flex-1">
+            <ul className="text-[4rem] text-white  kanik ml-16 ">
+              <li
+                className="border-b-4 inline-block cursor-pointer my-4"
+                onClick={() => setVisible((prev) => !prev)}
+              >
+                Home
+              </li>
+              <li onClick={() => setVisible((prev) => !prev)} className="cursor-pointer my-4">
+                Campaign Ideas
+              </li>
+              <li onClick={() => setVisible((prev) => !prev)} className="cursor-pointer my-4">
+                Metric Measures
+              </li>
+              <li onClick={() => setVisible((prev) => !prev)} className="cursor-pointer my-4">
+                Create Campaign
+              </li>
+            </ul>
+          </div>
+          <div className="border-l-4 px-6 border-white h-auto md:h-[100vh] flex items-center justify-center">
             <button
-              className="text-4xl text-white"
+              className="text-6xl text-white"
               onClick={() => setVisible((prev) => !prev)}
             >
               &times;
