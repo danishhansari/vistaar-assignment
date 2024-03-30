@@ -56,3 +56,17 @@
 .hide-overflow {
   overflow: hidden;
 }
+.campaign-grid {
+  display: grid;
+  /* grid-template-columns: repeat(9, minmax(0, 1fr)); */
+  padding: 4rem;
+}
+.first-cols {
+  grid-column: 1/4;
+}
+.second-cols {
+  grid-column: 4/7;
+}
+.third-cols {
+  grid-column: 7/10;
+}

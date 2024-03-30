@@ -4,6 +4,7 @@ import selectImg2 from "../assets/marketing.png";
 import selectImg3 from "../assets/hourglass.png";
 import selectImg4 from "../assets/communicate.png";
 import selectImg5 from "../assets/flag.png";
+import SelectCampaignType from "../components/SelectCampaignType";
 
 const selectionData = [
   { img: selectImg1, text: "Select campaign types" },
@@ -17,13 +18,16 @@ const SelectCampaign = () => {
   return (
     <>
       <div className="bg-[#4700FF] h-auto md:min-h-screen px-8">
-        <div className="flex">
+        <div className="flex items-center">
           <div className="w-full">
             <img src={createCampaign1} className="w-[250px] ml-36" alt="img" />
             <ul className="ml-24">
               {selectionData.map((select, i) => {
                 return (
-                  <li key={i} className="my-12 flex gap-4 items-center text-gray-200 kanik text-3xl font-semibold">
+                  <li
+                    key={i}
+                    className="my-12 flex gap-4 items-center text-gray-200 kanik text-3xl font-semibold"
+                  >
                     <img className={`w-16`} src={select.img} />
                     {select.text}
                   </li>
@@ -31,7 +35,9 @@ const SelectCampaign = () => {
               })}
             </ul>
           </div>
-          <div className="w-full"></div>
+          <div className="w-full">
+            <SelectCampaignType />
+          </div>
         </div>
       </div>
     </>
