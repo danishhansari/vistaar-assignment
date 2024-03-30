@@ -10,13 +10,13 @@ const CreateCompaign = () => {
           Create Compaign
         </h1>
         <div className="relative">
-          <div className="absolute left-[48%] top-[40px] translate-x-[-50%] z-30">
+          <div className="absolute left-[48%] top-[10%] translate-x-[-50%] z-30">
             <img src={bulbGif} className="w-[220px]" alt="Buld" />
           </div>
-          <div className="absolute z-30 left-[55%] translate-x-[-50%] top-[220px]">
-            <img src={formGif} className="w-[400px]" alt="form gif" />
+          <div className="absolute z-20 left-[55%] translate-x-[-50%] mt-[10%]">
+            <img src={formGif} className="max-w-[400px]" alt="form gif" />
           </div>
-          <div className="absolute z-30 left-[33%] top-[300px] translate-x-[50%]">
+          <div className="absolute z-20 left-[40%] mt-[14%] translate-x-[-50%]">
             <img src={wheelGif} className="w-[210px]" alt="wheel gif" />
           </div>
         </div>

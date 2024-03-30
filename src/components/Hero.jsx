@@ -11,7 +11,7 @@ const Hero = () => {
       <div
         className={`h-auto w-full md:h-[100vh] bg-[#FF007F] ${
           !visible
-            ? "hidden sticky top-0 left-0 overflow-x-hidden overflow-y-hidden"
+            ? "hidden sticky top-0 left-0 add-overflow"
             : ""
         }`}
       >
