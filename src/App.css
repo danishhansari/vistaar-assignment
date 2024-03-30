@@ -11,3 +11,9 @@
   color: #2f42dc;
   letter-spacing: 2.5px;
 }
+.font-rubik-inverse {
+  font-family: "Rubik Mono One";
+  text-shadow: -11px -2px 0px #2f42dc;
+  color: white;
+  letter-spacing: 2.5px;
+}

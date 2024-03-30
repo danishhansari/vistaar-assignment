@@ -5,7 +5,7 @@ import wheelGif from "../assets/wheel.gif";
 const CreateCompaign = () => {
   return (
     <>
-      <div className="bg-[#F3CB3B] h-[80vh] py-12">
+      <div className="bg-[#F3CB3B] h-[75vh] py-12">
         <h1 className="font-semibold text-6xl text-center uppercase font-rubik">
           Create Compaign
         </h1>
