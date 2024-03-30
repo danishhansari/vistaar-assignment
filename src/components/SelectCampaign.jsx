@@ -5,6 +5,7 @@ import selectImg3 from "../assets/hourglass.png";
 import selectImg4 from "../assets/communicate.png";
 import selectImg5 from "../assets/flag.png";
 import SelectCampaignType from "../components/SelectCampaignType";
+import DataFields from "./DataFields";
 
 const selectionData = [
   { img: selectImg1, text: "Select campaign types" },
@@ -17,8 +18,8 @@ const selectionData = [
 const SelectCampaign = () => {
   return (
     <>
-      <div className="bg-[#4700FF] h-auto md:min-h-screen px-8">
-        <div className="flex items-center">
+      <div className="bg-[#4700FF] h-auto md:min-h-screen py-4 px-8">
+        <div className="flex flex-col md:flex-row items-center">
           <div className="w-full">
             <img src={createCampaign1} className="w-[250px] ml-36" alt="img" />
             <ul className="ml-24">
@@ -36,7 +37,8 @@ const SelectCampaign = () => {
             </ul>
           </div>
           <div className="w-full">
-            <SelectCampaignType />
+            {/* <SelectCampaignType /> */}
+            <DataFields />
           </div>
         </div>
       </div>

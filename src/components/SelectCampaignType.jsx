@@ -9,7 +9,7 @@ import educationIdeasImg from "../assets/education-ideas.jpeg";
 const SelectCampaignType = () => {
   return (
     <>
-      <div className="bg-white rounded-xl relative">
+      <div className="bg-white rounded-[3rem] relative">
         <h1 className="py-2 text-center kanik uppercase text-4xl text-[#3D159F] font-semibold ">
           Select Campaign Type
         </h1>
