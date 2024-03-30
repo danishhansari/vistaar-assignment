@@ -6,6 +6,7 @@ import selectImg4 from "../assets/communicate.png";
 import selectImg5 from "../assets/flag.png";
 import SelectCampaignType from "../components/SelectCampaignType";
 import DataFields from "./DataFields";
+import CampaignDuration from "./CampaignDuration";
 
 const selectionData = [
   { img: selectImg1, text: "Select campaign types" },
@@ -38,7 +39,8 @@ const SelectCampaign = () => {
           </div>
           <div className="w-full">
             {/* <SelectCampaignType /> */}
-            <DataFields />
+            {/* <DataFields /> */}
+            <CampaignDuration />
           </div>
         </div>
       </div>
