@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className={`h-auto w-full md:h-[100vh] bg-[#FF007F] ${
+        className={`h-auto w-full md:min-h-[100vh] bg-[#FF007F] ${
           !visible
             ? "hidden sticky top-0 left-0 add-overflow"
             : ""

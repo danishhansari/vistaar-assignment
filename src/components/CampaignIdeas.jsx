@@ -39,7 +39,7 @@ const CampaignIdeas = () => {
 
   return (
     <>
-      <div className="h-[95vh] bg-[#FF007F] py-12 relative">
+      <div className="min-h-[95vh] bg-[#FF007F] py-12 relative">
         <h1 className="font-semibold text-6xl text-center uppercase font-rubik-inverse">
           Compaign Ideas
         </h1>

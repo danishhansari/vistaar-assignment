@@ -16,7 +16,7 @@ const selectionData = [
 const SelectCampaign = () => {
   return (
     <>
-      <div className="bg-[#4700FF] h-auto md:h-screen px-8">
+      <div className="bg-[#4700FF] h-auto md:min-h-screen px-8">
         <div className="flex">
           <div className="w-full">
             <img src={createCampaign1} className="w-[250px] ml-36" alt="img" />
