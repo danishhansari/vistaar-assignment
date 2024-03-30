@@ -8,6 +8,8 @@ import SelectCampaignType from "../components/SelectCampaignType";
 import DataFields from "./DataFields";
 import CampaignDuration from "./CampaignDuration";
 import ContactDetails from "./ContactDetails";
+import Done from "./Done";
+import { useState } from "react";
 
 const selectionData = [
   { img: selectImg1, text: "Select campaign types" },
@@ -17,7 +19,26 @@ const selectionData = [
   { img: selectImg5, text: "Completed" },
 ];
 
+const HandlePageChange = ({ indexval, fn }) => {
+  if (indexval === 0) {
+    return <SelectCampaignType fn={fn} />;
+  }
+  if (indexval === 1) {
+    return <DataFields fn={fn} />;
+  }
+  if (indexval === 2) {
+    return <CampaignDuration fn={fn} />;
+  }
+  if (indexval === 3) {
+    return <ContactDetails fn={fn} />;
+  }
+  if (indexval === 4) {
+    return <Done fn={fn} />;
+  }
+};
+
 const SelectCampaign = () => {
+  const [count, setCount] = useState(0);
   return (
     <>
       <div className="bg-[#4700FF] h-auto md:min-h-screen py-4 px-8">
@@ -39,10 +60,7 @@ const SelectCampaign = () => {
             </ul>
           </div>
           <div className="w-full">
-            {/* <SelectCampaignType /> */}
-            {/* <DataFields /> */}
-            {/* <CampaignDuration /> */}
-            <ContactDetails />
+            <HandlePageChange indexval={count} fn={setCount} />
           </div>
         </div>
       </div>

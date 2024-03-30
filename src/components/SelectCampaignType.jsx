@@ -6,7 +6,7 @@ import videoBasedQuizImg from "../assets/video-based-quiz.png";
 import glamificationImg from "../assets/gamification.png";
 import educationIdeasImg from "../assets/education-ideas.jpeg";
 
-const SelectCampaignType = () => {
+const SelectCampaignType = ({fn}) => {
   return (
     <>
       <div className="bg-white rounded-[4rem] relative">
@@ -107,7 +107,13 @@ const SelectCampaignType = () => {
           </div>
         </div>
 
-        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto absolute bottom-0 left-1/2">Next</button>
+        <button className="text-center text-white bg-[#4700FF] text-2xl font-bold py-2 px-8 my-2 mx-auto absolute bottom-0 left-1/2">
+          Next
+        </button>
+        {
+          console.log(fn
+            )
+        }
       </div>
     </>
   );
