@@ -1,15 +1,16 @@
-import CreateCompaign from "./components/CreateCompaign";
-import Footer from "./components/Footer";
-import "./App.css";
-import CampaignIdeas from "./components/CampaignIdeas";
+import CampaignIdeasPage from "./pages/CampaignIdeasPage";
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <h1 className="bg-red-400">hello ther</h1>
-      <CreateCompaign />
-      <CampaignIdeas />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/campaign-ideas" element={<CampaignIdeasPage />} />
+        </Routes>
+      </Router>
     </>
   );
 }

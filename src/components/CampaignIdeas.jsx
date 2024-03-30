@@ -6,6 +6,7 @@ import campaign4 from "../assets/campaign4.png";
 import campaign5 from "../assets/campaign5.png";
 import campaign6 from "../assets/campaign6.png";
 import campaign7 from "../assets/campaign7.png";
+import { useNavigate } from "react-router-dom";
 
 const imgArr = [
   campaign1,
@@ -19,6 +20,7 @@ const imgArr = [
 
 const CampaignIdeas = () => {
   const [count, setCount] = useState(0);
+  const navigate = useNavigate();
   useEffect(() => {
     const intervalId = setInterval(() => {
       if (count === imgArr.length - 1) {
@@ -29,7 +31,11 @@ const CampaignIdeas = () => {
     }, 2000);
 
     return () => clearInterval(intervalId);
-  }, [count, imgArr.length]);
+  }, [count]);
+  
+  const redirectPage = () => {
+    navigate("/campaign-ideas");
+  };
 
   return (
     <>
@@ -41,12 +47,15 @@ const CampaignIdeas = () => {
         <div className="relative ">
           <img
             src={imgArr[count]}
-            className="w-[550px] absolute left-[50%] translate-x-[-50%]"
+            className="w-[550px] absolute left-[50%] translate-x-[-50%] transition-all"
             alt=""
           />
         </div>
         <div className="absolute left-[50%] translate-x-[-50%] bottom-16">
-          <button className="bg-[#F3CB3B] text-black text-4xl px-12 py-3 font-semibold rounded-lg">
+          <button
+            onClick={redirectPage}
+            className="bg-[#F3CB3B] text-black text-4xl px-12 py-3 font-semibold rounded-lg"
+          >
             Know More
           </button>
         </div>
