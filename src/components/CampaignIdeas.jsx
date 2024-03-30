@@ -47,7 +47,7 @@ const CampaignIdeas = () => {
         <div className="relative ">
           <img
             src={imgArr[count]}
-            className="w-[550px] absolute left-[50%] translate-x-[-50%] transition-all"
+            className="w-[550px] absolute left-[50%] translate-x-[-50%] transition-all animation"
             alt=""
           />
         </div>

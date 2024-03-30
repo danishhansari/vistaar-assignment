@@ -26,3 +26,30 @@
 .kanik {
   font-family: "Kanit";
 }
+
+.add-shadow {
+  text-shadow: -5px -5px 0px #ff007f, -10px -10px 0px #2f42dc;
+  letter-spacing: -12px;
+}
+
+.tilt {
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+.animation {
+  animation: animate 2.5s infinite;
+}
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

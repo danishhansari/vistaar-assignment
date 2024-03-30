@@ -1,5 +1,6 @@
 import logoLight from "../assets/logo-light.jpg";
-import campaignIdeas1 from "../assets/campaignIdeas1.png";
+import campaignIdeas1 from "../assets/campaignIdeas1.png"
+
 const CampaignIdeasPage = () => {
   return (
     <>
