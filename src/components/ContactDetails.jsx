@@ -48,7 +48,7 @@ const ContactDetails = ({fn}) => {
             </div>
           </div>
           <div className="img">
-            <img src={contactImg} alt="" />
+            <img src={contactImg} className="max-w-[500px]" alt="" />
           </div>
         </div>
 

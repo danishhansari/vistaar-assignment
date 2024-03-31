@@ -41,7 +41,7 @@ const SelectCampaign = () => {
   const [count, setCount] = useState(0);
   return (
     <>
-      <div className="bg-[#4700FF] h-auto md:min-h-screen py-4 px-8">
+      <div className="bg-[#4700FF] py-4 px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full">
             <img src={createCampaign1} className="w-[250px] ml-36" alt="img" />
@@ -50,7 +50,9 @@ const SelectCampaign = () => {
                 return (
                   <li
                     key={i}
-                    className="my-12 flex gap-4 items-center text-gray-200 kanik text-3xl font-semibold"
+                    className={`my-12 flex gap-4 items-center kanik text-3xl font-semibold ${
+                      count === i ? "text-white" : "text-gray-400"
+                    }`}
                   >
                     <img className={`w-16`} src={select.img} />
                     {select.text}

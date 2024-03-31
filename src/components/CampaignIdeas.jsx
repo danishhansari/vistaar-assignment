@@ -32,14 +32,14 @@ const CampaignIdeas = () => {
 
     return () => clearInterval(intervalId);
   }, [count]);
-  
+
   const redirectPage = () => {
     navigate("/campaign-ideas");
   };
 
   return (
     <>
-      <div className="min-h-[95vh] bg-[#FF007F] py-12 relative">
+      <div className="h-full min-h-[95vh]  bg-[#FF007F] py-12 relative">
         <h1 className="font-semibold text-6xl text-center uppercase font-rubik-inverse">
           Compaign Ideas
         </h1>
@@ -47,7 +47,7 @@ const CampaignIdeas = () => {
         <div className="relative ">
           <img
             src={imgArr[count]}
-            className="w-[550px] absolute left-[50%] translate-x-[-50%] transition-all animation"
+            className="max-w-[550px] absolute left-[50%] translate-x-[-50%] transition-all animation"
             alt=""
           />
         </div>
