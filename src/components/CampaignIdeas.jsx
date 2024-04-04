@@ -39,25 +39,25 @@ const CampaignIdeas = () => {
 
   return (
     <>
-      <div className="h-full min-h-[95vh]  bg-[#FF007F] py-12 relative">
+      <div className="h-auto md:min-h-[95vh]  bg-[#FF007F] py-12 relative">
         <h1 className="font-semibold text-6xl text-center uppercase font-rubik-inverse">
           Compaign Ideas
         </h1>
 
-        <div className="relative ">
+        <div className="relative flex flex-col">
           <img
             src={imgArr[count]}
-            className="max-w-[550px] absolute left-[50%] translate-x-[-50%] transition-all animation"
+            className="max-w-[550px] mx-auto transition-all animation w-full"
             alt=""
           />
-        </div>
-        <div className="absolute left-[50%] translate-x-[-50%] bottom-16">
-          <button
-            onClick={redirectPage}
-            className="bg-[#F3CB3B] text-black text-4xl px-12 py-3 font-semibold rounded-lg"
-          >
-            Know More
-          </button>
+          <div className="self-center">
+            <button
+              onClick={redirectPage}
+              className="bg-[#F3CB3B] text-black text-4xl px-12 py-3 font-semibold rounded-lg"
+            >
+              Know More
+            </button>
+          </div>
         </div>
       </div>
     </>

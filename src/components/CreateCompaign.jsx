@@ -5,10 +5,11 @@ import wheelGif from "../assets/wheel.gif";
 const CreateCompaign = () => {
   return (
     <>
-      <div className="bg-[#F3CB3B] min-h-[75vh] py-12">
+      <div className="bg-[#F3CB3B] md:min-h-[75vh] py-12">
         <h1 className="font-semibold text-6xl text-center uppercase font-rubik">
           Create Compaign
         </h1>
+
         <div className="relative">
           <div className="absolute left-[48%] top-[10%] translate-x-[-50%] z-30">
             <img src={bulbGif} className="max-w-[220px]" alt="Buld" />

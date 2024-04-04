@@ -11,7 +11,7 @@ const Hero = () => {
     <>
       {visible ? <HamMenus fn={setVisible} /> : ""}
 
-      <div className="h-auto md:h-[95vh] bg-[#5BD7E8] border-bottom">
+      <div className="h-auto md:min-h-[95vh] bg-[#5BD7E8] border-bottom">
         <div className="flex">
           <div className="flex-1">
             <img src={logo} className="w-[220px] ml-[6rem]" alt="" />
