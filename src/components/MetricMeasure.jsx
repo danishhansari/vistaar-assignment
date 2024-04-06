@@ -173,7 +173,7 @@ const MetricMeasure = () => {
         )}
         {currentIndex < data.length - 1 && (
           <button
-            className="ml-8 text-4xl bg-black text-white py-2 px-3 rounded-full hover:bg-gray-900"
+            className="ml-8 text-4xl bg-black text-white py-2 px-3 rounded-full hover:bg-gray-900 inline-flex items-center justify-center"
             onClick={() =>
               setCurrentIndex((prev) => {
                 return prev === data.length - 1 ? 1 : prev + 1;
