@@ -35,6 +35,10 @@
   border-radius: 65% 35% 65% 35% / 67% 54% 46% 33%;
   background: #d9daff;
 }
+.add-shadow-2 {
+  text-shadow: 7px 0px 0px black;
+  letter-spacing: 1px;
+}
 
 .unique-border-2 {
   border-radius: 38% 62% 30% 30% / 76% 62% 38% 24%;
