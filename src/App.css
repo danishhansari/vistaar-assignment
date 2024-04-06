@@ -31,7 +31,15 @@
   text-shadow: -5px -5px 0px #ff007f, -10px -10px 0px #2f42dc;
   letter-spacing: -12px;
 }
+.unique-border {
+  border-radius: 65% 35% 65% 35% / 67% 54% 46% 33%;
+  background: #d9daff;
+}
 
+.unique-border-2 {
+  border-radius: 38% 62% 30% 30% / 76% 62% 38% 24%;
+  background: #e8e1c1;
+}
 .tilt {
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
@@ -68,10 +76,4 @@
 }
 .third-cols {
   grid-column: 7/10;
-}
-.slider .owl-item.active.center .slider-card {
-  transform: scale(1.15);
-  opacity: 1;
-  background-color: #ccc;
-  color: black;
 }
