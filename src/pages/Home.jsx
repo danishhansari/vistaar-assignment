@@ -4,12 +4,14 @@ import "../App.css";
 import CampaignIdeas from "../components/CampaignIdeas";
 import Hero from "../components/Hero";
 import SelectCampaign from "../components/SelectCampaign";
+import MetricMeasure from "../components/MetricMeasure";
 
 const Home = () => {
   return (
     <>
       <Hero />
       <CampaignIdeas />
+      <MetricMeasure />
       <CreateCompaign />
       <SelectCampaign />
       <Footer />

@@ -58,7 +58,6 @@
 }
 .campaign-grid {
   display: grid;
-  /* grid-template-columns: repeat(9, minmax(0, 1fr)); */
   padding: 4rem;
 }
 .first-cols {
@@ -69,4 +68,10 @@
 }
 .third-cols {
   grid-column: 7/10;
+}
+.slider .owl-item.active.center .slider-card {
+  transform: scale(1.15);
+  opacity: 1;
+  background-color: #ccc;
+  color: black;
 }
