@@ -5,6 +5,7 @@ import leadsAndSalesGif from "../assets/leads-and-sales.gif";
 import brandAwarenessGif from "../assets/brand-awareness.gif";
 import analyticsLeaderBoardGif from "../assets/analytics-leaderboard.gif";
 import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 const data = [
   {
@@ -53,7 +54,7 @@ const MetricMeasure = () => {
         </div>
 
         <div>
-          <div className="flex flex-2 gap-8 h-[50vh] md:h-[80vh]">
+          <div className="flex flex-2 gap-8 h-[50vh] md:min-h-[80vh]">
             {currentIndex > 0 && (
               <div className="bg-[#9E04C5] p-6 rounded-3xl ">
                 <div
@@ -78,6 +79,7 @@ const MetricMeasure = () => {
                 </h1>
               </div>
             )}
+
             <div className="bg-[#9E04C5] p-6 rounded-3xl flex flex-col justify-center items-center h-full">
               <div
                 className={
@@ -148,6 +150,30 @@ const MetricMeasure = () => {
                 </h1>
               </div>
             )}
+
+            {currentIndex === data.length - 1 && (
+              <div className="bg-[#f2dafb] p-6 rounded-3xl invisible">
+                <div
+                  className={
+                    currentIndex + 1 === 1 ||
+                    currentIndex + 1 === 4 ||
+                    currentIndex + 1 === 3 ||
+                    currentIndex + 1 === 5
+                      ? "unique-border flex items-center justify-center"
+                      : "flex items-center justify-center"
+                  }
+                >
+                  <img
+                    src={data[currentIndex].gif}
+                    className="max-w-[180px] w-full"
+                    alt="Paragraph"
+                  />
+                </div>
+                <h1 className="rotate-[-90deg] text-sm md:text-2xl text-white translate-x-0 translate-y-[100px] md:translate-y-[200px] kanik font-bold text-center">
+                  {data[currentIndex].heading}
+                </h1>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -163,6 +189,7 @@ const MetricMeasure = () => {
             ></div>
           );
         })}
+
         {currentIndex === data.length - 1 && (
           <button
             onClick={() => setCurrentIndex(0)}
@@ -173,14 +200,14 @@ const MetricMeasure = () => {
         )}
         {currentIndex < data.length - 1 && (
           <button
-            className="ml-8 text-4xl bg-black text-white py-2 px-3 rounded-full hover:bg-gray-900 inline-flex items-center justify-center"
+            className="ml-8 text-4xl bg-black text-white p-3  rounded-full hover:bg-gray-900 inline-flex items-center justify-center"
             onClick={() =>
               setCurrentIndex((prev) => {
                 return prev === data.length - 1 ? 1 : prev + 1;
               })
             }
           >
-            &rarr;
+            <FaArrowRight />
           </button>
         )}
       </div>

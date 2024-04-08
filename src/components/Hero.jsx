@@ -5,6 +5,7 @@ import soundGif from "../assets/sound.gif";
 import strokeImg from "../assets/stroke.png";
 import HamMenus from "./HamMenus";
 import curlLine from "../assets/curl-line.png";
+import { MdOutlineSegment } from "react-icons/md";
 
 const Hero = () => {
   const [visible, setVisible] = useState(false);
@@ -18,7 +19,6 @@ const Hero = () => {
             <img src={logo} className="max-w-[200px] w-full" alt="Logo" />
 
             <div className="flex justify-around px-4 items-center">
-
               <div className="text tilt ml-28">
                 <h1 className="text-[#4700FF] uppercase font-bold rubik text-2xl md:text-6xl tracking-0 leading-none text-right">
                   make your
@@ -64,7 +64,8 @@ const Hero = () => {
               className="text-4xl text-[#FF007F]"
               onClick={() => setVisible((prev) => !prev)}
             >
-              &#9776;
+              {/* &#9776; */}
+              <MdOutlineSegment />
             </button>
           </div>
         </div>

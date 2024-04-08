@@ -1,3 +1,4 @@
+import { RxCross2 } from "react-icons/rx";
 const HamMenus = ({ fn }) => {
   return (
     <>
@@ -33,10 +34,11 @@ const HamMenus = ({ fn }) => {
           </div>
           <div className="border-l-4 px-6 border-white h-auto md:h-[100vh] flex items-center justify-center">
             <button
-              className="text-6xl text-white"
+              className="text-4xl text-white"
               onClick={() => fn((prev) => !prev)}
             >
-              &times;
+              {/* &times; */}
+              <RxCross2 />
             </button>
           </div>
         </div>
